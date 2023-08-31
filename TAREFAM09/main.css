@@ -40,6 +40,10 @@ button{
     list-style-type: none;
 }
 
+.display-none{
+    display: none;
+}
+
 .item-completado:hover{
     cursor: pointer;
     text-decoration: line-through;
