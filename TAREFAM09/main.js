@@ -1,16 +1,17 @@
 $(document).ready(function(){
+
     $('form').on('submit', function(e) {
         e.preventDefault()
-    })
 
-
-    $('#botao').click(function() {
         const tarefa = $('#novaTarefa').val()
         if(tarefa !== ''){
-            let lista = $('#lista')
-            $(lista).appendTo('<li>' + tarefa + '</li>') 
+            $('#lista').append('<li>' + tarefa + '</li>') 
             $('#novaTarefa').val('')
         }
+    })
+
+    $('ul').on('click', 'li', function(){
+        $(this).toggleClass('.item-completado')
     })
 })
 
